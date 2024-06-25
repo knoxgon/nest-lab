@@ -25,7 +25,8 @@ export class CarsService {
 
   async delete(id: string) {
     const _id = new mongoose.Types.ObjectId(id);
-    const abc = await this.carsModel.findOneAndDelete({ _id }).exec();
-    return abc;
+    const result = await this.carsModel.findOneAndDelete({ _id }).exec();
+    return result;
+  }
   }
 }

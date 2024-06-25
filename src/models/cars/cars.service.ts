@@ -28,5 +28,9 @@ export class CarsService {
     const result = await this.carsModel.findOneAndDelete({ _id }).exec();
     return result;
   }
+
+  async deleteAll() {
+    const result = await this.carsModel.deleteMany().exec();
+    return result;
   }
 }
